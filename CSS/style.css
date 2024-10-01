@@ -106,7 +106,7 @@ align-items: center;
 /*Sidebar Items*/
 .sidebar li
 {
-  height: 60px;
+  height: 30px;
   margin-top: 25px;
   list-style: none;
   display: flex;
