@@ -1,0 +1,177 @@
+:root
+{
+  --body-color:#E4E9F7;
+  --sidebar-color:#FFF;
+  --primary-color:#f7f302;
+  --primary-color-light:#F6F5FF;
+  --toggle-color:#DDD;
+  --text-color:black;
+
+  --tran02: all 0.2s ease;
+  --tran03: all 0.3s ease;
+  --tran04: all 0.4s ease;
+  --tran05: all 0.5s ease;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.body
+{
+  height: 100vh;
+  background: var(--body-color);
+}
+
+header .image-text .header-text
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text .name
+{
+  font-weight: 600;
+}
+
+.header-text .inc
+{
+  font-weight: 600;
+  margin-top: -2px;
+}
+
+.sidebar .text
+{
+  font-size: 16px;
+  font-weight: 600;
+  color:var(--text-color);
+}
+
+.sidebar .image
+{
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+/*===== Sidebar =====*/
+.sidebar
+{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--sidebar-color);
+
+}
+
+.sidebar header
+{
+  position: relative;
+}
+
+.sidebar .image-text img
+{
+  width:70px;
+  border-radius: 6px;
+}
+
+.sidebar header .image-text
+{
+display: flex;
+align-items: center;
+}
+
+/*===== toggle ======*/
+.sidebar header .toggle
+{
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  height: 35px;
+  width: 35px;
+  background: #f7f302;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+/*Sidebar Items*/
+.sidebar li
+{
+  height: 60px;
+  margin-top: 25px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+}
+
+.sidebar .icons
+{
+  min-width: 60px;
+  font-size: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.sidebar .icons,
+.sidebar .text
+{
+  color:var(--text-color)
+}
+
+.sidebar li a
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transform: var(--tran03);
+}
+
+.sidebar  .menu-bar
+{
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+/*Highlighted when mouse points it*/
+.sidebar li a:hover
+{
+  background: var(--primary-color);
+  transform: var(--tran03);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text
+{
+  color:red;
+}
+/*Search box*/
+.sidebar .search-box
+{
+background: var(--primary-color-light);
+}
+
+.search-box input
+{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background:var(--primary-color-light);
+}
+
