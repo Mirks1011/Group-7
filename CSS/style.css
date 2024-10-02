@@ -18,9 +18,10 @@
   font-style: normal;
 }
 
-.body {
+body {
   height: 100vh;
   background: var(--body-color);
+  transition: var(--tran05);
 }
 
 header .image-text .header-text {
@@ -58,6 +59,7 @@ header .image-text .header-text {
   width: 250px;
   padding: 10px 14px;
   background: var(--sidebar-color);
+  transition: var(--tran05);
 }
 
 .sidebar header {
@@ -150,7 +152,7 @@ header .image-text .header-text {
   border-radius: 6px;
   background: var(--primary-color-light);
 }
-/*For Dark mode css*/
+/*For Dark mode SWITCH css*/
 .menu-bar .mode {
   background: var(--primary-color-light);
 }
@@ -202,4 +204,23 @@ header .image-text .header-text {
 
 body.dark .switch::before {
   left: 25px;
+}
+
+body.dark {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}
+
+/*For Closing and opening Sidebar */
+
+.sidebar.close {
+  width: 88px;
+}
+
+.sidebar.close .text {
+  opacity: 0;
 }
