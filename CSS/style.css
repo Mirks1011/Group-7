@@ -3,8 +3,10 @@
   --sidebar-color: #fff;
   --primary-color: #f7f302;
   --primary-color-light: #f6f5ff;
-  --toggle-color: #ddd;
+  --toggle-color: #0377fc;
   --text-color: gray;
+  --icon-color: #0377fc;
+  --toggle-icon-color: white;
 
   --tran02: all 0.2s ease;
   --tran03: all 0.3s ease;
@@ -84,12 +86,13 @@ header .image-text .header-text {
   transform: translateY(-50%);
   height: 35px;
   width: 35px;
-  background: #f7f302;
+  background: var(--toggle-color);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   font-size: 22px;
+  color: var(--toggle-icon-color);
 }
 
 /*Sidebar Items*/
@@ -108,7 +111,9 @@ header .image-text .header-text {
   display: flex;
   justify-content: center;
 }
-.sidebar .icons,
+.sidebar .icons {
+  color: var(--icon-color);
+}
 .sidebar .text {
   color: var(--text-color);
 }
@@ -173,6 +178,10 @@ header .image-text .header-text {
 }
 /*DARK MODE TOGGLE*/
 .menu-bar .mode .toggle-switch {
+  position: absolute;
+  right: 0;
+  align-items: center;
+  justify-content: center;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -211,8 +220,10 @@ body.dark {
   --sidebar-color: #242526;
   --primary-color: #3a3b3c;
   --primary-color-light: #3a3b3c;
-  --toggle-color: #fff;
+  --toggle-color: #dbdbdb;
+  --toggle-icon-color: ##18191a;
   --text-color: #ccc;
+  --icon-color: #ccc;
 }
 
 /*For Closing and opening Sidebar */
@@ -222,5 +233,14 @@ body.dark {
 }
 
 .sidebar.close .text {
+  opacity: 0;
+}
+
+/* Light Mode Icon */
+body.dark .menu-bar .mode i.sun {
+  opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
   opacity: 0;
 }

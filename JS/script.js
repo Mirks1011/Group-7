@@ -6,9 +6,15 @@ const body = document.querySelector("body"),
     modeText = document.querySelector(".mode-text");
 /* DARK MODE BUTTON SCRIPT */
     modeSwitch.addEventListener("click", () =>{
-        body.classList.toggle("dark");
-    })
+        body.classList.toggle("dark")
 
+        if(body.classList.contains("dark")){
+            modeText.innerText = "Light Mode"
+        }else{
+            modeText.innerText = "Dark Mode"
+        }  
+    });
+/* Opening of Sidebar */
     toggle.addEventListener("click", () =>{
         sidebar.classList.toggle("close");
     })
